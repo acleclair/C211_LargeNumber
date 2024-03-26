@@ -16,6 +16,8 @@ public class TestNumber {
     public static void main(String[] args) {
         testConstructorInt();
 		testCopy();
+	    	testPower();
+	    
     }
 	
 	// Tests the constructor with an integer
