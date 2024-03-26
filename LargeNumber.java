@@ -212,6 +212,7 @@ public class LargeNumber implements Comparable<LargeNumber> {
 	
 	// Team 8
     public void power(LargeNumber other) {
+		//Ben Is awesome
         // convert the base number and the exponent to an integer
         int base = this.toInt();
         int exponent = other.toInt();
