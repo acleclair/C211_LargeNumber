@@ -81,6 +81,4 @@ public class TestNumber {
         base.power(exponent);
         
         System.out.println("3 ^ 3 = " + base);
-	System.out.println("0 ^ 3 = " + base);
-	System.out.println("3 ^ 1 = " + base);
     }
