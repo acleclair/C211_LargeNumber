@@ -17,6 +17,7 @@ public class TestNumber {
         testConstructorInt();
 		testCopy();
 	    	testPower();
+	    testMultiply();
 	    
     }
 	
@@ -45,8 +46,14 @@ public class TestNumber {
 	/////////////////////////////////////////////////////////
 	// Function stubs to be implemented by the teams
 	
-	// Team 6 
+ // Team 4
+    //tests multiply method
     public static void testMultiply() {
+    	LargeNumber a = new LargeNumber(1256869);
+    	LargeNumber b = new LargeNumber(-8934544);
+    	
+    	a.multiply(b);
+    	System.out.println("The product is " + a + ".");
 	}
 	
 	// Team 5
@@ -82,3 +89,4 @@ public class TestNumber {
         
         System.out.println("3 ^ 3 = " + base);
     }
+}

@@ -195,11 +195,44 @@ public class LargeNumber implements Comparable<LargeNumber> {
 
 // Helper method to compare the magnitude of two LargeNumber instances
 // Code to be added here
-}
 	
-    // Team 4 
-    public void multiply(LargeNumber other) {	
-	}
+ // Team 4 
+    //method multiplies two LargeNumbers together
+       public void multiply(LargeNumber other) {
+       	int size1 = this.getSize();
+       	int size2 = other.getSize();
+       	
+       	ArrayList<Integer> result = new ArrayList<>(); //stores result
+       
+       	for (int i = 0; i < size1 + size2; i++){
+       		result.add(0);
+       		}
+       	
+       	
+       	//multiplies each number with corresponding number
+       	for (int i = 0; i < size1; i++){
+       		int carry = 0;
+       		int n1 = this.number.get(i);
+       	
+       		for (int j = 0; j < size2; j++){
+       			int n2 = other.number.get(j);
+       			int
+       			mul = n1 * n2 + result.get(i + j) + carry;
+       			result.set(i + j, mul % 10); //updates digit
+       			carry = mul / 10;
+       			}
+       	//stores remaining
+       		if (carry > 0)
+       			result.set(i + size2, result.get(i + size2) + carry);
+       		}
+       	
+       	while (result.size() > 1 && result.get(result.size() - 1) == 0){
+       		result.remove(result.size() - 1);
+       		}
+       	//updates to result
+       	this.number = result;
+       	this.sign *= other.sign;
+       }
 	
 	// Team 5
 	public void divide(LargeNumber other) {
@@ -239,3 +272,4 @@ public class LargeNumber implements Comparable<LargeNumber> {
         // update this LargeNumber with the result
         this.init(result);
     }
+}
