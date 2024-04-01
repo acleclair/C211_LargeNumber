@@ -195,6 +195,23 @@ public class LargeNumber implements Comparable<LargeNumber> {
 
 // Helper method to compare the magnitude of two LargeNumber instances
 // Code to be added here
+	private int compareMagnitude(LargeNumber other) {
+        if (this.number.size() > other.number.size()) {
+            return 1; //returns 1 if this.number is larger
+        } else if (this.number.size() < other.number.size()) {
+            return -1; //returns -1 if other number is larger
+        } else {
+		// loop to go through list and compare numbers
+            for (int i = this.number.size() - 1; i >= 0; i--) {
+                int compareNumber = Integer.compare(this.number.get(i), other.number.get(i));
+                if (compareNumber != 0) {
+			//returns -1 or 1 depending on if numbers are lesser or greater
+                    return compareNumber;
+                }
+            }
+        }
+        return 0; //returns 0 if equal magnitude
+    }
 	
  // Team 4 
     //method multiplies two LargeNumbers together
