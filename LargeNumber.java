@@ -119,7 +119,41 @@ public class LargeNumber implements Comparable<LargeNumber> {
 	// Team 3
     @Override
     public int compareTo(LargeNumber o) {
-        // TODO Auto-generated method stub
+        //compare signs
+	if (this.sign != o.sign) {
+		return Integer.compare(this.sign, o.sign);
+	}
+		
+	//compare size
+	if (this.getSize() < o.getSign()) {
+		return -1 *this.sign;
+	} else if (this.getSize() > o.getSize()) {
+		return 1 * this.sign;
+	} 
+		
+	//compare digits
+	for (int i = this.getSize() -1; i >= 0; i--) {
+		int number1 = this.number.get(i);
+		int number2 = o.number.get(i);
+		
+		if (this.sign == 1) {
+			// For positive numbers, compare digits normally
+			if(number1 < number2) {
+				return -1;
+			}else if (number1 > number2) {
+				return 1;
+			} else {
+				// For negative numbers, reverse comparison
+				if (number1 < number2) {
+					return 1;
+				} else if(number1 > number2) {
+					return -1;
+				}
+			}
+		}
+	}
+		
+	//if number are equal return 0
         return 0;
     }
 	
