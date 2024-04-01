@@ -244,32 +244,16 @@ public class LargeNumber implements Comparable<LargeNumber> {
 	
 	
 	// Team 8
-    public void power(LargeNumber other) {
-        // convert the base number and the exponent to an integer
-        int base = this.toInt();
-        int exponent = other.toInt();
+public void power(LargeNumber other) {                                                                                                                                                                                                                   LargeNumber largeNumber = new LargeNumber(10); // Replace with your actual LargeNumber
+        LargeNumber other = new LargeNumber(5); // Replace with your actual LargeNumber
 
-        // initialize result to 1
-        int result = 1;
-
-        // special case: if exponent is 0, result should be 1
-        if (exponent == 0) {
-            this.init(1);
-            return;
+        // Multiply largeNumber by itself other.value times
+        for (int i = 0; i < other.value; i++) {
+            largeNumber.multiply(other);
         }
 
-        // special case: if base is 0, result should be 0
-        if (base == 0) {
-            this.init(0);
-            return;
-        }
-
-        // calculate the result of base^exponent
-        for (int i = 1; i <= exponent; i++) {
-            result = result * base;
-        }
-
-        // update this LargeNumber with the result
-        this.init(result);
+        System.out.println( largeNumber.value + 
+                " to the power of " + other.value + "is  " + largeNumber.value);
     }
+}
 }
