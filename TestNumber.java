@@ -18,6 +18,7 @@ public class TestNumber {
 		testCopy();
 	    	testPower();
 	    testMultiply();
+	    testPercent();
 	    
     }
 	
@@ -62,6 +63,11 @@ public class TestNumber {
 	
 	// Team 7
     public static void testPercent() {
+	LargeNumber a = new LargeNumber(123456);
+	LargeNumber b = new LargeNumber(4567);
+
+	LargeNumber percentage = a.percent(b);
+	System.out.println(b + " is " + percentage + "% of " + a);
 	}
 	
 	// Team 2
