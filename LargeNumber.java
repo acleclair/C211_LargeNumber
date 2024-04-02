@@ -133,7 +133,7 @@ public class LargeNumber implements Comparable<LargeNumber> {
 	
 	// Team 1
     // Addition Function
-   public class LargeNumber {
+ class LargeNumber {
     private ArrayList<Integer> digits;
 
     public LargeNumber() {
