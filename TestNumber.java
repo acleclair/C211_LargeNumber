@@ -82,11 +82,13 @@ public class TestNumber {
 	// Team 8
     public static void testPower() {
         
-        LargeNumber base = new LargeNumber(3); 
-        LargeNumber exponent = new LargeNumber(3);  
+        LargeNumber base = new LargeNumber(689521); 
+        LargeNumber exponent = new LargeNumber(105);  
         
         base.power(exponent);
-        
-        System.out.println("3 ^ 3 = " + base);
+
+        System.out.println( largeNumber.value + 
+                " to the power of " + other.value + "is  " + largeNumber.value);
+    
     }
 }
