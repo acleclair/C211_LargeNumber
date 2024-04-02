@@ -66,6 +66,12 @@ public class TestNumber {
 	
 	// Team 2
     public static void testSubtract() {
+	LargeNumber num1 = new LargeNumber("5678");
+        LargeNumber num2 = new LargeNumber("1234");
+
+        num1.subtractExact(num2);
+
+        System.out.println("Difference: " + num1);
 	}
 	
 	// Team 6
