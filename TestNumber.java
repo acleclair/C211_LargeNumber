@@ -73,7 +73,7 @@ public class TestNumber {
     }
 	
 	// Team 1
-   public class TestNumber {
+  class TestNumber {
 
     public static void main(String[] args) {
         testAdd();
@@ -88,6 +88,7 @@ public class TestNumber {
         System.out.println("Sum: " + num1); // Output should be 1111111110
     }
 }
+
 	
     // Team 3
     public static void testCompare() {
