@@ -73,8 +73,21 @@ public class TestNumber {
     }
 	
 	// Team 1
+   public class TestNumber {
+
+    public static void main(String[] args) {
+        testAdd();
+    }
+
     public static void testAdd() {
-	}
+        LargeNumber num1 = new LargeNumber("123456789");
+        LargeNumber num2 = new LargeNumber("987654321");
+
+        num1.add(num2);
+
+        System.out.println("Sum: " + num1); // Output should be 1111111110
+    }
+}
 	
     // Team 3
     public static void testCompare() {
