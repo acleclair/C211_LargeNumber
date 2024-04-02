@@ -239,8 +239,17 @@ public class LargeNumber implements Comparable<LargeNumber> {
 	}
 	
 	// Team 7
-	public void percent(LargeNumber other) {
-	}
+	// Notes from Dr. LeClair: "I believe you are on Team 7 which got the percent function. 
+    	// The percent function takes in another large number and says what percent it is. A.percent(B) return what percent B is of A"
+	public LargeNumber percent(LargeNumber other) {
+        LargeNumber hundredPercent = new LargeNumber(100);
+        LargeNumber otherTimesOneHundred = other.multiply(hundredPercent);
+
+        LargeNumber percentage = otherTimesOneHundred.divide(this);
+        
+
+        return percentage;
+    }
 	
 	
 	// Team 8
