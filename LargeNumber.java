@@ -133,8 +133,58 @@ public class LargeNumber implements Comparable<LargeNumber> {
 	
 	// Team 1
     // Addition Function
+   public class LargeNumber {
+    private ArrayList<Integer> digits;
+
+    public LargeNumber() {
+        digits = new ArrayList<>();
+    }
+
+    public LargeNumber(String number) {
+        digits = new ArrayList<>();
+        for (int i = 0; i < number.length(); i++) {
+            digits.add(Character.getNumericValue(number.charAt(i)));
+        }
+    }
+
     public void add(LargeNumber other) {
-	}
+        // Ensure that the current number has at least as many digits as the other number
+        if (digits.size() < other.digits.size()) {
+            expandDigits(other.digits.size() - digits.size());
+        }
+
+        int carry = 0;
+        for (int i = 0; i < other.digits.size(); i++) {
+            int sum = digits.get(digits.size() - i - 1) + other.digits.get(other.digits.size() - i - 1) + carry;
+            digits.set(digits.size() - i - 1, sum % 10);
+            carry = sum / 10;
+        }
+
+        // If there's still a carry after adding all digits, add it as a new digit
+        if (carry > 0) {
+            digits.add(0, carry);
+        }
+    }
+
+    // Method to expand the digits list to accommodate more digits
+    private void expandDigits(int count) {
+        for (int i = 0; i < count; i++) {
+            digits.add(0, 0);
+        }
+    }
+
+    // Other methods like subtraction, multiplication, division, etc. can be implemented similarly
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (int digit : digits) {
+            sb.append(digit);
+        }
+        return sb.toString();
+    }
+}
+
 	
     // Team 2
     public void subtract(LargeNumber other) {
