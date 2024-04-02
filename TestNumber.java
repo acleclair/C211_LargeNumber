@@ -46,15 +46,15 @@ public class TestNumber {
 	/////////////////////////////////////////////////////////
 	// Function stubs to be implemented by the teams
 	
- // Team 4
+    // Team 6
     //tests multiply method
     public static void testMultiply() {
-    	LargeNumber a = new LargeNumber(1256869);
-    	LargeNumber b = new LargeNumber(-8934544);
-    	
-    	a.multiply(b);
-    	System.out.println("The product is " + a + ".");
-	}
+        LargeNumber m1, m2;
+        m1 = new LargeNumber(2);
+        m2 = new LargeNumber(2);
+        m2.multiply(m1);
+        System.out.println("m1 * m1 = " + m2);
+    }
 	
 	// Team 5
     public static void testDivide() {
