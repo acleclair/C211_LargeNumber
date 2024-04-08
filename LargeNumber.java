@@ -128,8 +128,25 @@ public class LargeNumber implements Comparable<LargeNumber> {
     }
 
     // Team 6
-    public void init(String n) {
-	}
+public void init(String n) {
+number = new ArrayList<Integer>();
+sign = 1;
+
+int startIndex = 0;
+if (n.charAt(0) == '-') {
+sign = -1;
+startIndex = 1;
+}
+
+for (int i = n.length() - 1; i >= startIndex; i--) {
+int digit = n.charAt(i) - '0';
+number.add(digit);
+}
+
+if (number.isEmpty()) {
+number.add(0);
+}
+}
 	
 	// Team 1
     // Addition Function
